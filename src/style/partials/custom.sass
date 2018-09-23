@@ -1,0 +1,36 @@
+body
+	background: $mainColor
+	font-family: "Montserrat", Arial, Helvetica, sans-serif
+	font-size: 14px
+.icon
+	display: inline-block
+	cursor: pointer
+	&-burger
+		margin-right: 25px
+		+sprite($language)
+	&-search
+		+sprite($search)
+	&-shape
+		margin-right: 25px
+		+sprite($shape)
+	&-cart
+		+sprite($cart)
+	&-facebook
+		+sprite($facebook)
+	&-instagram
+		+sprite($instagram)
+	&-pinterest
+		+sprite($pinterest)
+	&-twitter
+		+sprite($twitter)
+	&-close
+		+sprite($close)
+
+
+// Font icons
+.fico
+	display: inline-block
+	font-size: 3rem
+	&::before
+		display: block
+
