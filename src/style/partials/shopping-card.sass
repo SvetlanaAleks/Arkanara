@@ -1,12 +1,34 @@
-.carts
-	display: block
-	position: absolute
-	top: -17px
+.overlay
+	background: transparentize(black, .7)
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
 	right: 0
+	opacity: 0
+	pointer-events: none
+	z-index: 5
+.carts
+	z-index: 10
+	display: flex
+	flex-direction: column
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
 	min-width: 350px
-	min-height: 754px
 	background-color: white
-	border: 1px solid #e5e5e5
+	transform: translateX(100%)
+	opacity: 0
+	pointer-events: none
+	transition: all .5s
+	&.is-active 
+		transform: translateX(0)
+		opacity: 1
+		pointer-events: initial
+		&+.overlay
+			pointer-events: initial
+			opacity: 1
 	&__top
 		display: flex
 		justify-content: space-between
@@ -14,8 +36,83 @@
 		background: $light-grey
 		min-height: 83px
 		padding: 33px
-		margin-bottom: 40px
 	&__title
 		font-size: 22px
 		font-weight: 500
 		text-transform: uppercase
+	&__list
+		padding: 40px 30px 17px 30px
+		flex-grow: 1
+		overflow-y: auto
+		.item
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding-bottom: 20px
+			&:not(:last-of-type)
+				border-bottom: 1px solid $light-grey
+			&:not(:first-child)
+				padding-top: 20px
+			&__img
+				margin-right: 15px
+		.content
+			max-width: 155px
+			&__title
+				font-size: 13px
+				margin-bottom: 15px
+			&__param
+				font-size: 11px
+				color: $color-param
+				margin-bottom: 7px
+				&:last-of-type
+					margin-bottom: 16px
+				.size
+					color: initial
+				.color
+					color: initial
+			.price
+				font-size: 12px
+				color: $color-param
+				.value
+					font-size: 20px
+					font-weight: 500
+					color: black
+				.count
+					color: black
+					font-size: 12px
+					font-weight: 500
+		.icon
+			&-closecart
+				align-self: flex-start
+	&__check
+		padding: 23px 30px 12px 30px
+		background: rgba(244, 244, 244, .5)
+		color: black
+		.list
+			&__item
+				display: flex
+				justify-content: space-between
+				margin-bottom: 15px
+				font-size: 13px
+				.sum
+					font-size: 14px
+				&:last-of-type
+					text-transform: uppercase
+					&:last-of-type
+						font-size: 20px
+				&:not(:last-of-type)
+					margin-bottom: 20px
+				&:last-of-type
+					padding-top: 25px
+					border-top: 1px solid #f4f4f4
+		.checkout
+			height: 50px
+			background-color: black
+			border-radius: 25px
+			text-transform: uppercase
+			font-size: 12px
+			font-weight: 500
+			padding: 0 60px
+			border: none
+			color: white
+			cursor: pointer

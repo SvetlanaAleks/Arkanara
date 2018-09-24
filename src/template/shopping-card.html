@@ -1,20 +1,51 @@
-<div class="carts">
+<div class="carts js_hidden-block">
+
    <div class="carts__top">
       <h2 class="carts__title">Shopping cart</h2>
-      <i class="icon icon-close"></i>
+      <i class="icon icon-close js_close"></i>
    </div>
    <ul class="carts__list">
       <li class="item">
-         <img src="img/item1.jpg" alt="">
+         <img class="item__img" src="img/item1.jpg" alt="">
+         <div class="content">
+            <h3 class="content__title">Happy intarsia crewneck sweater </h3>
+            <p class="content__param">Size: <b class="size">S</b></p>
+            <p class="content__param">Color: <b class="color">Blue</b></p>
+            <span class="price"><b class="value">$24.95</b> х <b class="count">2</b></span>
+         </div>
+         <i class="icon icon-closecart"></i>
+      </li>
+      <li class="item">
+         <img class="item__img" src="img/item1.jpg" alt="">
          <div class="content">
             <h3 class="content__title">Happy intarsia crewneck sweater</h3>
-            <p class="content__param">Size <b class="content__param--size">S</b></p>
-            <p class="content__param">Color <b class="content__param--color">Blue</b></p>
-            <span class="price"><b class="value">$24.95</b>х<b class="count">2</b></span>
+            <p class="content__param">Size: <b class="size">S</b></p>
+            <p class="content__param">Color: <b class="color">Blue</b></p>
+            <span class="price"><b class="value">$24.95</b> х <b class="count">2</b></span>
          </div>
-         <i></i>
+         <i class="icon icon-closecart"></i>
       </li>
-      <li class="carts__item"></li>
-      <li class="carts__item"></li>
+      <li class="item">
+         <img class="item__img" src="img/item1.jpg" alt="">
+         <div class="content">
+            <h3 class="content__title">Happy intarsia crewneck sweater</h3>
+            <p class="content__param">Size: <b class="size">S</b></p>
+            <p class="content__param">Color: <b class="color">Blue</b></p>
+            <span class="price"><b class="value">$24.95</b> х <b class="count">2</b></span>
+         </div>
+         <i class="icon icon-closecart"></i>
+      </li>
    </ul>
+   <div class="carts__check">
+      <ul class="list">
+         <li class="list__item">
+            <div class="wrap"><span class="amt">3</span> items</div class="wrap"><b class="sum">42.95 $</b>
+         </li>
+         <li class="list__item">Shipping<b class="sum"></b>7.00 $</li>
+         <li class="list__item">Taxes<b class="sum"></b>0.00 $</li>
+         <li class="list__item">Total<b class="sum"></b>42.95 $</li>
+      </ul>
+      <button class="checkout">processed to Checkout</button>
+   </div>
 </div>
+<div class="overlay"></div>

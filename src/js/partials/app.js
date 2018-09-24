@@ -16,4 +16,8 @@ $(document).click(function(e) {
 
 hiddenBlocks.click(function(e) {
   e.stopPropagation();
+  var target = $(e.target);
+  if (target.hasClass("js_close")) {
+    $(this).removeClass("is-active");
+  }
 });
