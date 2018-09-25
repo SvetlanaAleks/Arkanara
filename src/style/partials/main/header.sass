@@ -1,4 +1,98 @@
-@import "partials/nav"
-@import "partials/shopping-card"
 .header
-   padding-top: 15px
+	padding-top: 15px
+	height: 100vh
+	position: relative
+	background: url(../img/header_back.jpg) no-repeat center top
+	background-size: cover
+.slider
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	padding-bottom: 50px
+	.slick-list, .slick-track
+		height: 100%
+	&__item
+		height: 100%
+		outline: none
+		.wrap
+			width: 380px
+			.title
+				color: #161918
+				font-size: 56px
+				line-height: 64px
+				margin-bottom: 30px
+			.text
+				color: #7f7f7f
+				font-size: 13px
+				line-height: 20px
+				margin-bottom: 50px
+			.btn
+				border: 1px solid transparent
+				background-color: black
+				color: white
+				font-size: 11px
+				line-height: 20px
+				text-transform: uppercase
+				height: 56px
+				padding: 0 45px
+				cursor: pointer
+				transition: background .3s
+				&:hover
+					border: 1px solid black
+					color: black
+					background: none
+		.container
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: center
+			&::after, &::before
+				display: none
+	.fico
+		font-size: 18px
+.arr
+	width: 56px
+	height: 56px
+	background-color: #292929
+	border: 3px solid white
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 50%
+	color: #c8c8c8
+	cursor: pointer
+	transition: background-color .3s
+	position: absolute
+	z-index: 1
+	top: 50%
+	transform: translateY(-50%)
+	&:hover
+		background-color: rgba(255, 255, 255, 0.3)
+	&--right
+		right: 20px
+	&--left
+		left: 20px
+.slick-dots
+	position: absolute
+	bottom: 35px
+	left: 0
+	right: 0
+	margin: auto
+	li
+		display: inline-block
+		&:not(:last-of-type)
+			margin-right: 7px
+		button
+			box-sizing: border-box
+			cursor: pointer
+			border: none
+			background-color: white
+			width: 10px
+			height: 10px
+			padding: 0
+			font-size: 0
+		&.slick-active
+			button
+				background-color: black

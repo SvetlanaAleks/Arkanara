@@ -1,4 +1,6 @@
 .nav
+	position: relative
+	z-index: 10
 	&__top
 		display: flex
 		justify-content: space-between
@@ -149,10 +151,10 @@
 			content: ''
 			display: block
 			position: absolute
+			bottom: -30px
 			right: 0
-			top: 0
-			height: 100%
-			border-right: 2px solid red
+			top: -30px
+			border-right: 2px solid #e5e5e5
 		.col
 			&:not(:last-of-type)
 				margin-right: 55px
@@ -173,6 +175,16 @@
 							margin-bottom: 15px
 	&__products
 		font-family: 'Montserrat', Arial, Helvetica, sans-serif
+		padding-right: 170px
+		position: relative
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			bottom: -30px
+			right: 0
+			top: -30px
+			border-right: 2px solid #e5e5e5
 		.item
 			display: flex
 			width: 300px

@@ -21,3 +21,17 @@ hiddenBlocks.click(function(e) {
     $(this).removeClass("is-active");
   }
 });
+
+// slider init
+$(".slider").slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: "linear",
+  prevArrow:
+    '<div class="arr arr--left"><i class="fico fico-arr-left"></i></div>',
+  nextArrow:
+    '<div class="arr arr--right"><i class="fico fico-arr-right"></i></div>',
+  dotsClass: "container slick-dots"
+});
