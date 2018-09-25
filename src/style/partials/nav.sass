@@ -108,6 +108,7 @@
 		padding-top: 25px
 		display: flex
 		justify-content: center
+		position: relative
 	&__link
 		text-transform: uppercase
 		text-decoration: none
@@ -115,8 +116,86 @@
 		font-weight: 700
 		color: $color-text
 		font-size: 11px
+		margin-bottom: 20px
+		&:hover
+			.submenu
+				opacity: 1
+				transform: perspective(600px) rotateX(0deg)
 		&:not(:last-of-type)
 			margin-right: 79px
+		.link
+			text-decoration: none
+			color: inherit
+.submenu
+	display: flex
+	justify-content: space-between
+	text-transform: none
+	opacity: 0
+	padding: 30px
+	position: absolute
+	top: 100%
+	left: 0
+	right: 0
+	background-color: white
+	box-shadow: 0 7px 15px rgba(1, 2, 3, 0.15)
+	transform: perspective(600px) rotateX(-90deg)
+	transform-origin: 0% 0%
+	transition: .6s ease-in-out
+	&__category
+		position: relative
+		display: flex
+		padding-right: 30px
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			right: 0
+			top: 0
+			height: 100%
+			border-right: 2px solid red
+		.col
+			&:not(:last-of-type)
+				margin-right: 55px
+			.sect
+				&:not(:last-of-type)
+					margin-bottom: 30px
+				&__title
+					text-transform: uppercase
+					margin-bottom: 20px
+				&__list
+					.item
+						font-size: 12px
+						font-weight: 400
+						cursor: pointer
+						&:hover
+							opacity: .7
+						&:not(:last-of-type)
+							margin-bottom: 15px
+	&__products
+		font-family: 'Montserrat', Arial, Helvetica, sans-serif
+		.item
+			display: flex
+			width: 300px
+			&:not(:last-of-type)
+				margin-bottom: 30px
+			&__img
+				margin-right: 20px
+			&__title
+				font-size: 14px
+				margin-bottom: 15px
+				line-height: 20px
+			&__price
+				color: #929292
+				.new
+					font-size: 16px
+					margin-right: 8px
+				.old
+					font-size: 13px
+					text-decoration: line-through
+	&__logo
+		display: flex
+		flex-direction: column
+		justify-content: space-between
 .cart
 	&__btn
 		position: relative
