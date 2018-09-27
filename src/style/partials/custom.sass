@@ -28,6 +28,42 @@ body
 	&-closecart
 		+sprite($closecart)
 
+.row
+	display: flex
+	&:not(:last-of-type)
+		margin-bottom: 35px
+	.item
+		position: relative
+		&:not(:last-of-type)
+			margin-right: 30px
+		&__pick
+			margin-bottom: 20px
+			max-width: 100%
+			height: auto
+.flag
+	position: absolute
+	z-index: 1
+	padding: 0 12px 0 12px
+	height: 26px
+	color: white
+	font-size: 12px
+	line-height: 26px
+	top: 20px
+	&-new
+		background-color: black
+		right: 15px
+	&-sale
+		background-color: #ea2828
+		left: 15px
+.description
+	&__title
+		font-size: 14px
+		color: #161918
+		margin-bottom: 15px
+	&__price
+		color: #929292
+		font-size: 16px
+
 // Font icons
 .fico
 	display: inline-block
