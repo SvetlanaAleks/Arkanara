@@ -35,3 +35,27 @@ $(".slider").slick({
     '<div class="arr arr--right"><i class="fico fico-arr-right"></i></div>',
   dotsClass: "container slick-dots"
 });
+
+$(document).ready(function() {
+  var tabLinks = $(".js_tab-link");
+  var menuList = $(".js_menu-list");
+
+  tabLinks.click(function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var menuTab = $this.parents(".trending__tabs");
+    var menuItems = menuTab.find(".list");
+    var parent = $this.parents(".list");
+    console.log(menuItems);
+    console.log(parent);
+
+    menuItems.removeClass("list--active");
+    parent.addClass("list--active");
+
+    var target = $this.attr("href");
+    var targetTab = $(target);
+
+    menuList.removeClass("trending__list--active");
+    targetTab.addClass("trending__list--active");
+  });
+});

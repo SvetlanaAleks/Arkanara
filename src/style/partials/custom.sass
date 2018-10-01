@@ -6,12 +6,10 @@ body
 	display: inline-block
 	cursor: pointer
 	&-burger
-		margin-right: 25px
 		+sprite($language)
 	&-search
 		+sprite($search)
 	&-shape
-		margin-right: 25px
 		+sprite($shape)
 	&-cart
 		+sprite($cart)
@@ -42,18 +40,28 @@ body
 	&-lacoste
 		+sprite($lacoste)
 
-.row
+.plates
 	display: flex
 	&:not(:last-of-type)
 		margin-bottom: 35px
 	.item
+		width: 20%
 		position: relative
+		overflow: hidden
 		&:not(:last-of-type)
 			margin-right: 30px
 		&__pick
-			margin-bottom: 20px
 			max-width: 100%
 			height: auto
+		&__img-wrap
+			white-space: nowrap
+			font-size: 0
+			transition: transform .3s
+		&:hover
+			.item
+				&__img-wrap
+					transform: translateX(-100%)
+
 .flag
 	position: absolute
 	z-index: 1

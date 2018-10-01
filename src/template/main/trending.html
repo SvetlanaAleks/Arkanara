@@ -4,11 +4,20 @@
       <p class="trending__text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
          id est laborum.</p>
-      <div class="tabs">
-         <button class="tabs__item">New products</button>
-         <button class="tabs__item">Prices drop</button>
-         <button class="tabs__item">Best sales</button>
-      </div>
+      <ul class="trending__tabs">
+         <li class="list list--active"><a class="link js_tab-link" href="#tab1">New products</a></li>
+         <li class="list"><a class="link js_tab-link" href="#tab2">Prices drop</a></li>
+         <li class="list"><a class="link js_tab-link" href="#tab3">Best sales</a></li>
+      </ul>
    </div>
-   <!--=include ../tabs/tab1.html -->
+   <div class="trending__list trending__list--active js_menu-list" id="tab1">
+      <!--=include ../tabs/tab1.html -->
+   </div>
+   <div class="trending__list js_menu-list" id="tab2">
+      <!--=include ../tabs/tab2.html -->
+   </div>
+   <div class="trending__list js_menu-list" id="tab3">
+      <!--=include ../tabs/tab3.html -->
+   </div>
+   <button class="trending__btn">all products</button>
 </section>
