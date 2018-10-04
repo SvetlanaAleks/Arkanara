@@ -13,6 +13,7 @@
 	&__lang
 		position: relative
 		.list
+			z-index: 2
 			position: absolute
 			left: 0
 			top: 100%
@@ -27,15 +28,17 @@
 				transform: translateY(0)
 				opacity: 1
 				pointer-events: initial
-			&__item
-				cursor: pointer
-				font-size: 11px
+			.link
+				text-decoration: none
 				color: #7b7b7b
+				cursor: pointer
+				&:hover
+					color: #161918
+			&__item
+				font-size: 11px
 				font-weight: 500
 				&:not(:last-of-type)
 					margin-bottom: 12px
-				&:hover
-					color: #161918
 	&__share
 		position: relative
 		.social
@@ -45,7 +48,7 @@
 			top: 100%
 			background: $mainColor
 			box-shadow: 0 7px 15px rgba(1, 2, 3, 0.15)
-			padding: 16px 22px 15px 24px
+			padding: 15px 20px
 			transform: translateY(-300%)
 			opacity: 0
 			pointer-events: none
@@ -54,6 +57,9 @@
 				transform: translateY(0)
 				opacity: 1
 				pointer-events: initial
+			.link
+				cursor: pointer
+				padding: 2px 7px
 			.icon
 				opacity: .4
 				&:hover
@@ -162,6 +168,9 @@
 			.sect
 				&:not(:last-of-type)
 					margin-bottom: 30px
+				.link-menu
+					text-decoration: none
+					color: black
 				&__title
 					text-transform: uppercase
 					margin-bottom: 20px
@@ -194,10 +203,13 @@
 			&__img
 				margin-right: 20px
 			&__title
+				color: black
+				text-decoration: none
 				font-size: 14px
-				margin-bottom: 15px
 				line-height: 20px
+				cursor: pointer
 			&__price
+				margin-top: 15px
 				color: #929292
 				.new
 					font-size: 16px
