@@ -1,0 +1,57 @@
+.aside
+	width: 220px
+	&__link
+		text-decoration: none
+		color: #929292
+		&--title
+			color: black
+			font-size: 14px
+			text-transform: uppercase
+		&--subparagraph
+			color: black
+.item
+	font-size: 12px
+	margin-bottom: 15px
+	&:last-of-type
+		margin-bottom: 35px
+.wrapp
+	display: flex
+	justify-content: space-between
+	align-items: baseline
+.fico
+	cursor: pointer
+	font-size: 7px
+.title
+	padding-top: 30px
+	margin-bottom: 35px
+	text-transform: uppercase
+.legend
+	margin-bottom: 15px
+.checkbox
+	display: none
+	&:checked
+		&+label
+			&::after
+				display: block
+	&+label
+		cursor: pointer
+		position: relative
+		padding-left: 25px
+		&::before, &::after
+			content: ''
+			display: block
+			position: absolute
+		&::before
+			top: 0
+			left: 0
+			width: 16px
+			height: 16px
+			border: 1px solid black
+		&::after
+			display: none
+			width: 10px
+			height: 10px
+			background-color: black
+			border: 1px solid black
+			left: 3px
+			top: 3px
