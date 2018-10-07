@@ -23,12 +23,22 @@
 .dropdown
 	display: inline-block
 	cursor: pointer
-	max-width: 160px
+	width: 160px
 	&--active
 		.fico-arrow
 			transform: rotate(-180deg)
 	&__list
+		padding: 10px 0
 		display: none
+		background-color: #f2f2f2
+	&__item
+		padding: 0 10px
+		line-height: 26px
+		&:hover
+			opacity: .7
+	&__link
+		text-decoration: none
+		color: #272727
 	&__trigger
 		position: relative
 		white-space: nowrap
@@ -36,6 +46,7 @@
 		+ellipsis
 		display: block
 	&__value
+		padding-left: 10px
 		padding-right: 20px
 	.fico-arrow
 		position: absolute
