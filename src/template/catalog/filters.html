@@ -17,7 +17,7 @@
          </div>
          <ul class="subparagraph">
             <li class="item"><a href="#" class="link">Blouses</a></li>
-            <li class="item"><a href="#" class="link link_color-black">Shirts</a></li>
+            <li class="item"><a href="#" class="link link_color">Shirts</a></li>
             <li class="item"><a href="#" class="link">T-Shirts</a></li>
          </ul>
       </div>
@@ -28,57 +28,59 @@
          <h3 class="title"><a href="#" class="title__link">Outerwear</a></h3>
       </div>
    </div>
-   <div class="aside__filters">
-      <h4 class="title">Filter By</h4>
-      <fieldset class="wrap">
-         <legend class="legend">Categories</legend>
-         <div class="item">
-            <input type="checkbox" class="checkbox checkbox_color_black" id="dresses" name="interest" value="dresses">
-            <label class="label" for="dresses">Dresses</label>
-         </div>
-         <div class="item">
-            <input type="checkbox" class="checkbox checkbox_color_black" id="blouses" name="interest" value="blouses">
-            <label for="blouses">Blouses</label>
-         </div>
-         <div class="item">
-            <input type="checkbox" class="checkbox checkbox_color_black" id="outerwear" name="interest" value="outerwear">
-            <label for="outerwear">Outerwear</label>
-         </div>
-      </fieldset>
-      <fieldset class="wrap">
-         <legend class="legend">Categories</legend>
-         <div class="item">
-            <input type="checkbox" class="checkbox checkbox_color_beige" id="beige" name="interest" value="beige">
-            <label for="beige">Beige <span class="count">(1)</span> </label>
-         </div>
-         <div class="item">
-            <input type="checkbox" class="checkbox checkbox_color_bl" id="black" name="interest" value="black">
-            <label for="black">Black <span class="count">(2)</span> </label>
-         </div>
-         <div class="item">
-            <input type="checkbox" class="checkbox checkbox_color_yellow" id="yellow" name="interest" value="yellow">
-            <label for="yellow">Yellow <span class="count">(4)</span> </label>
-         </div>
-         <div class="item">
-            <input type="checkbox" class="checkbox checkbox_color_white" id="white" name="interest" value="white">
-            <label for="white">White <span class="count">(2)</span> </label>
-         </div>
-      </fieldset>
-      <fieldset class="wrap">
-         <legend class="legend">Compositions</legend>
-         <div class="item">
-            <input type="checkbox" class="checkbox checkbox_color_black" id="cotton" name="interest" value="cotton">
-            <label for="cotton">Cotton <span class="count">(3)</span> </label>
-         </div>
-         <div class="item">
-            <input type="checkbox" class="checkbox checkbox_color_black" id="polyester" name="interest" value="polyester">
-            <label for="polyester">Polyester <span class="count">(2)</span> </label>
-         </div>
-         <div class="item">
-            <input type="checkbox" class="checkbox checkbox_color_black" id="viscose" name="interest" value="viscose">
-            <label for="viscose">Viscose <span class="count">(4)</span> </label>
-         </div>
-      </fieldset>
-      <button type="reset" class="btn-reset">Clean all</button>
-   </div>
+   <form action="/" method="GET">
+      <div class="aside__filters">
+         <h4 class="title">Filter By</h4>
+         <fieldset class="wrap">
+            <legend class="legend">Categories</legend>
+            <div class="item">
+               <input type="checkbox" class="checkbox checkbox_color_black" id="dresses" name="interest" value="dresses">
+               <label class="label" for="dresses">Dresses</label>
+            </div>
+            <div class="item">
+               <input type="checkbox" class="checkbox checkbox_color_black" id="blouses" name="interest" value="blouses">
+               <label for="blouses">Blouses</label>
+            </div>
+            <div class="item">
+               <input type="checkbox" class="checkbox checkbox_color_black" id="outerwear" name="interest" value="outerwear">
+               <label for="outerwear">Outerwear</label>
+            </div>
+         </fieldset>
+         <fieldset class="wrap">
+            <legend class="legend">Categories</legend>
+            <div class="item">
+               <input type="checkbox" class="checkbox checkbox_color_beige" id="beige" name="interest" value="beige">
+               <label for="beige">Beige <span class="count">(1)</span> </label>
+            </div>
+            <div class="item">
+               <input type="checkbox" class="checkbox checkbox_color_bl" id="black" name="interest" value="black">
+               <label for="black">Black <span class="count">(2)</span> </label>
+            </div>
+            <div class="item">
+               <input type="checkbox" class="checkbox checkbox_color_yellow" id="yellow" name="interest" value="yellow">
+               <label for="yellow">Yellow <span class="count">(4)</span> </label>
+            </div>
+            <div class="item">
+               <input type="checkbox" class="checkbox checkbox_color_white" id="white" name="interest" value="white">
+               <label for="white">White <span class="count">(2)</span> </label>
+            </div>
+         </fieldset>
+         <fieldset class="wrap">
+            <legend class="legend">Compositions</legend>
+            <div class="item">
+               <input type="checkbox" class="checkbox checkbox_color_black" id="cotton" name="interest" value="cotton">
+               <label for="cotton">Cotton <span class="count">(3)</span> </label>
+            </div>
+            <div class="item">
+               <input type="checkbox" class="checkbox checkbox_color_black" id="polyester" name="interest" value="polyester">
+               <label for="polyester">Polyester <span class="count">(2)</span> </label>
+            </div>
+            <div class="item">
+               <input type="checkbox" class="checkbox checkbox_color_black" id="viscose" name="interest" value="viscose">
+               <label for="viscose">Viscose <span class="count">(4)</span> </label>
+            </div>
+         </fieldset>
+         <button type="reset" class="btn-reset">Clean all</button>
+      </div>
+   </form>
 </aside>

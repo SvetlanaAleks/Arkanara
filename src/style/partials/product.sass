@@ -1,0 +1,46 @@
+.products
+	width: calc(100% - 220px)
+	display: inline-block
+	vertical-align: top
+	padding-left: 50px
+	&__title
+		font-size: 32px
+		margin-bottom: 25px
+	&__text
+		font-size: 13px
+		margin-bottom: 40px
+		line-height: 20px
+	&__filter
+		float: right
+		white-space: nowrap
+		.sort
+			vertical-align: top
+			color: #989898
+.result
+	padding: 20px
+	font-size: 13px
+	background-color: #f2f2f2
+.dropdown
+	display: inline-block
+	cursor: pointer
+	max-width: 160px
+	&--active
+		.fico-arrow
+			transform: rotate(-180deg)
+	&__list
+		display: none
+	&__trigger
+		position: relative
+		white-space: nowrap
+	&__item, &__value
+		+ellipsis
+		display: block
+	&__value
+		padding-right: 20px
+	.fico-arrow
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+		font-size: 7px
+		transition: transform .3s

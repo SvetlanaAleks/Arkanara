@@ -1,4 +1,6 @@
 .aside
+	display: inline-block
+	vertical-align: top
 	width: 220px
 	.title-wrap
 		display: flex
@@ -23,7 +25,7 @@
 	.link
 		text-decoration: none
 		color: #929292
-		&_color-black
+		&_color
 			color: black
 .aside
 	&__filters
@@ -40,11 +42,6 @@
 				margin-bottom: 10px
 			.checkbox
 				display: none
-				&_color_beige
-					&:checked
-						&+label
-							&::after
-								display: block
 				&:checked
 					&+label
 						&::after
