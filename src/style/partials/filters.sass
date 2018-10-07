@@ -16,8 +16,8 @@
 		.fico
 			cursor: pointer
 			font-size: 7px
-.subparagraph
-	.item
+.sub
+	&__item
 		font-size: 12px
 		margin-bottom: 15px
 		&:last-of-type
@@ -35,73 +35,73 @@
 			text-transform: uppercase
 		.wrap
 			margin-bottom: 25px
-		.legend
-			margin-bottom: 15px
-		.item
-			&:not(:last-of-type)
-				margin-bottom: 10px
-			.checkbox
-				display: none
-				&:checked
+			&__item
+				&:not(:last-of-type)
+					margin-bottom: 10px
+				.checkbox
+					display: none
+					&:checked
+						&+label
+							&::after
+								display: block
 					&+label
-						&::after
+						cursor: pointer
+						position: relative
+						padding-left: 25px
+						&::before, &::after
+							content: ''
 							display: block
-				&+label
-					cursor: pointer
-					position: relative
-					padding-left: 25px
-					&::before, &::after
-						content: ''
-						display: block
-						position: absolute
-					&::before
-						top: 0
-						left: 0
-						width: 16px
-						height: 16px
-						border: 1px solid black
-					&::after
-						display: none
-						width: 10px
-						height: 10px
-						background-color: black
-						border: 1px solid black
-						left: 3px
-						top: 3px
-				&_color_beige, &_color_bl, &_color_yellow, &_color_white
-					&+label
+							position: absolute
 						&::before
-							border: 1px solid transparent
-						&::after
 							top: 0
 							left: 0
 							width: 16px
 							height: 16px
-							border: 1px solid #e6e6e6
-				&_color_beige
-					&+label
-						&::before
-							background-color: #f1e5d2
+							border: 1px solid black
 						&::after
-							background-color: #f1e5d2
-				&_color_bl
-					&+label
-						&::before
+							display: none
+							width: 10px
+							height: 10px
 							background-color: black
-						&::after
-							background-color: black
-				&_color_yellow
-					&+label
-						&::before
-							background-color: #ebad29
-						&::after
-							background-color: #ebad29
-				&_color_white
-					&+label
-						&::before
-							background-color: #f6f6f6
-						&::after
-							background-color: #f6f6f6
+							border: 1px solid black
+							left: 3px
+							top: 3px
+					&_color_beige, &_color_bl, &_color_yellow, &_color_white
+						&+label
+							&::before
+								border: 1px solid transparent
+							&::after
+								top: 0
+								left: 0
+								width: 16px
+								height: 16px
+								border: 1px solid #e6e6e6
+					&_color_beige
+						&+label
+							&::before
+								background-color: #f1e5d2
+							&::after
+								background-color: #f1e5d2
+					&_color_bl
+						&+label
+							&::before
+								background-color: black
+							&::after
+								background-color: black
+					&_color_yellow
+						&+label
+							&::before
+								background-color: #ebad29
+							&::after
+								background-color: #ebad29
+					&_color_white
+						&+label
+							&::before
+								background-color: #f6f6f6
+							&::after
+								background-color: #f6f6f6
+		.legend
+			margin-bottom: 15px
 .btn-reset
 	border: 1px solid black
 	font-size: 12px

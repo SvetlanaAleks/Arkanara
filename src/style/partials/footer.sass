@@ -1,6 +1,5 @@
 .footer
 	background-color: #fafafa
-	// min-height: 430px
 	.wrap
 		display: flex
 		justify-content: space-between
@@ -17,19 +16,19 @@
 			line-height: 20px
 			margin-bottom: 35px
 	&__list
-		.item
-			&:not(:last-of-type)
-				margin-bottom: 20px
-			&:first-of-type
-				margin-bottom: 50px
-			.link
-				text-decoration: none
-				color: #929292
-				transition: opacity .3s
-				&--title
-					color: black
-				&:hover
-					opacity: .7
+	&__item
+		&:not(:last-of-type)
+			margin-bottom: 20px
+		&:first-of-type
+			margin-bottom: 50px
+		.link
+			text-decoration: none
+			color: #929292
+			transition: opacity .3s
+			&--title
+				color: black
+			&:hover
+				opacity: .7
 	&__form
 		width: 310px
 		position: relative

@@ -59,3 +59,36 @@ $(document).ready(function() {
     targetTab.addClass("trending__list--active");
   });
 });
+
+for (let i = 0; i < 30; i++) {
+  let item = `<div class="item">
+  <div class="item__content">
+     <div class="item__img-wrap">
+        <img class="item__pick" src="img/new-item1.jpg" alt="product">
+        <img class="item__pick" src="img/hover-item.jpg" alt="product">
+     </div>
+     <a href="#" class="btn btn-view">quick view</a>
+     <a href="#" class="btn btn-details">more details</a>
+  </div>
+  <div class="description">
+     <h4 class="description__title">Excepteur sint occaecat cupidatat</h4>
+     <div class="item__bottom">
+        <div class="description__price">
+           <span class="new">$ 199.00</span>
+        </div>
+        <div class="colors">
+           <input class="radio-inp" type="radio" name="color" value="red" id="red${i}"><label class="label label--red"
+              for="red${i}"></label>
+           <input class="radio-inp" type="radio" name="color" value="orange" id="orange${i}"><label class="label label--orange"
+              for="orange${i}"></label>
+           <input class="radio-inp" type="radio" name="color" value="green" id="green${i}"><label class="label label--green"
+              for="green${i}"></label>
+           <input class="radio-inp" type="radio" name="color" value="blue" id="blue${i}"><label class="label label--blue"
+              for="blue${i}"></label>
+        </div>
+     </div>
+  </div>
+  </div>`;
+
+  console.log(item);
+}
