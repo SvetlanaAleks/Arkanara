@@ -3,10 +3,13 @@
 	vertical-align: top
 	width: 220px
 	.title-wrap
+		position: relative
 		display: flex
 		justify-content: space-between
 		align-items: baseline
 		margin-bottom: 15px
+		cursor: pointer
+		+unselectable
 		.title
 			font-size: 14px
 			text-transform: uppercase
@@ -15,8 +18,17 @@
 				text-decoration: none
 		.fico
 			cursor: pointer
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translateY(-50%) rotate(0)
 			font-size: 7px
+			transition: transform .3s
+		&--active
+			.fico-arrow
+				transform: translateY(-50%) rotate(-180deg)
 .sub
+	display: none
 	&__item
 		font-size: 12px
 		margin-bottom: 15px
