@@ -199,4 +199,31 @@ body
 	font-size: 3rem
 	&::before
 		display: block
-
+.out
+	overflow: hidden
+.burger
+	top: 18px
+	position: fixed
+	cursor: pointer
+	width: 20px
+	display: none
+	+r(991)
+		display: inline-block
+	&__line
+		display: block
+		transition: all .4s
+		height: 2px
+		background: #161918
+		&:not(:last-of-type)
+			margin-bottom: 3px
+	&--active
+		.burger
+			&__line
+				&:nth-of-type(2)
+					opacity: 0
+				&:nth-of-type(1)
+					transform: scale(.8) rotate(45deg)
+					transform-origin: 0 0
+				&:nth-of-type(3)
+					transform: scale(.8) rotate(-45deg)
+					transform-origin: 0 100%

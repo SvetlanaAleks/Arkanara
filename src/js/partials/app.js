@@ -5,6 +5,7 @@ callBtns.click(function(e) {
   //Зупинити вспливання події
   e.stopPropagation();
   //   Знайти найближчий блок по селектору
+  $(".js_burger").trigger("menuHide");
   var target = $(this).siblings(".js_hidden-block");
   target.toggleClass("is-active");
   hiddenBlocks.not(target).removeClass("is-active");
@@ -16,6 +17,7 @@ $(document).click(function(e) {
 
 hiddenBlocks.click(function(e) {
   e.stopPropagation();
+
   var target = $(e.target);
   if (target.hasClass("js_close")) {
     $(this).removeClass("is-active");

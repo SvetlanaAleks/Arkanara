@@ -1,20 +1,31 @@
 .nav
 	padding-top: 15px
 	position: relative
-	z-index: 10
+	z-index: 101
+	+r(991)
+		position: fixed
+		left: 0
+		right: 0
+		top: 0
+		padding: 15px
+		background: transparentize(#dedede,.25)
+		padding-bottom: 0
 	&__top
 		display: flex
 		justify-content: space-between
 		align-items: center
 		padding-bottom: 25px
 		border-bottom: 1px solid $grey
+		+r(991)
+			padding-bottom: 15px
 	&__btns
 		display: flex
 		align-items: center
+		+r(991)
+			padding-left: 46px
 	&__lang
 		position: relative
 		.list
-			z-index: 2
 			position: absolute
 			left: 0
 			top: 100%
@@ -25,7 +36,8 @@
 			opacity: 0
 			pointer-events: none
 			transition: all .5s
-			&.is-active 
+			&.is-active
+				z-index: 102
 				transform: translateY(0)
 				opacity: 1
 				pointer-events: initial
@@ -58,6 +70,7 @@
 				transform: translateY(0)
 				opacity: 1
 				pointer-events: initial
+				z-index: 102
 			.link
 				cursor: pointer
 				padding: 2px 7px
@@ -79,7 +92,8 @@
 		opacity: 0
 		pointer-events: none
 		transition: all .5s
-		&.is-active 
+		&.is-active
+			z-index: 102
 			transform: translateY(0)
 			opacity: 1
 			pointer-events: initial
@@ -119,6 +133,21 @@
 		justify-content: center
 		position: relative
 		padding-bottom: 20px
+		transition: transform .6s
+		+r(991)
+			top: 51px
+			display: block
+			text-align: center
+			z-index: 100
+			left: 0
+			right: 0
+			position: fixed
+			bottom: 0
+			transform: translateX(-100%)
+			background: rgba(78, 74, 74, 0.81)
+			&--active
+				overflow-y: auto
+				transform: translateX(0)
 	&__link
 		text-transform: uppercase
 		text-decoration: none
@@ -126,16 +155,31 @@
 		font-weight: 700
 		color: $color-text
 		font-size: 11px
+		+r(991)
+			line-height: 40px
+			font-size: 14px
+			font-weight: normal
+			transition: background .3s
+			cursor: pointer
+			&:hover
+				background: rgba(0,0,0,.2)
 		&:hover
 			.submenu
 				opacity: 1
 				transform: perspective(600px) rotateX(0deg)
+				+r(991)
+					max-height: 400px
+					padding: 15px
 		&:not(:last-of-type)
 			margin-right: 60px
+			+r(991)
+				margin-right: 0
 		.link
 			text-decoration: none
 			color: inherit
 			padding: 10px 20px
+			+r(991)
+				color: #dedede
 .submenu
 	display: flex
 	justify-content: space-between
@@ -150,11 +194,27 @@
 	box-shadow: 0 7px 15px rgba(1, 2, 3, 0.15)
 	transform: perspective(600px) rotateX(-90deg)
 	transform-origin: 0% 0%
-	transition: .6s ease-in-out
+	transition: all .6s ease-in-out
+	+r(991)
+		transition: all .6s
+		position: static
+		opacity: 1
+		transform: none
+		display: block
+		max-height: 0
+		overflow-y: auto
+		background: rgba(0,0,0,.2)
+		color: white
+		line-height: 27px
+		padding: 0
+		&__products, &__logo
+			display: none
 	&__category
 		position: relative
 		display: flex
 		padding-right: 30px
+		+r(991)
+			justify-content: center
 		&::after
 			content: ''
 			display: block
@@ -163,18 +223,26 @@
 			right: 0
 			top: -30px
 			border-right: 2px solid #e5e5e5
+			+r(991)
+				display: none
 		.col
 			&:not(:last-of-type)
 				margin-right: 55px
+				+r(991)
+					margin-right: 15px
 			.sect
 				&:not(:last-of-type)
 					margin-bottom: 30px
 				.link-menu
 					text-decoration: none
 					color: black
+					+r(991)
+						color: white
 				&__title
 					text-transform: uppercase
 					margin-bottom: 20px
+					+r(991)
+						margin-bottom: 0
 				&__list
 					.item
 						font-size: 12px
@@ -184,6 +252,8 @@
 							opacity: .7
 						&:not(:last-of-type)
 							margin-bottom: 15px
+							+r(991)
+								margin-bottom: 0
 	&__products
 		font-family: 'Montserrat', Arial, Helvetica, sans-serif
 		padding-right: 170px
@@ -239,8 +309,11 @@
 		padding: 0 5px
 		right: -8px
 		bottom: -5px
-.icon
-	&-burger
+.fico
+	&-worlwide
+		color: #161918
+		font-size: 18px
 		margin-right: 25px
+.icon
 	&-shape
 		margin-right: 25px

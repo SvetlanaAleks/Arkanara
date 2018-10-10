@@ -8,8 +8,6 @@ const Tags = (function() {
       const _this = this;
 
       filters.on("change", function() {
-        console.log("change");
-
         let checkedEl = [];
         for (let i = 0; i < filters.length; i++) {
           const filter = $(filters[i]);
