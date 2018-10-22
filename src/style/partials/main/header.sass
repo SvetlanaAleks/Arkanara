@@ -17,16 +17,29 @@
 		outline: none
 		.wrap
 			width: 380px
+			+r(1199)
+				margin-left: 60px
+			+r(991)
+				margin-left: 40px
+			+r(575)
+				margin-left: 60px
 			.title
 				color: #161918
 				font-size: 56px
 				line-height: 64px
 				margin-bottom: 30px
+				+r(767)
+					font-size: 44px
+				+r(575)
+					font-size: 32px
+					margin-bottom: 10px
 			.text
 				color: #7f7f7f
 				font-size: 13px
 				line-height: 20px
 				margin-bottom: 50px
+				+r(767)
+					max-width: 200px
 			.btn
 				text-decoration: none
 				border: 1px solid transparent
@@ -51,6 +64,8 @@
 				display: none
 	.fico
 		font-size: 18px
+		+r(767)
+			font-size: 15px
 .arr
 	width: 56px
 	height: 56px
@@ -67,6 +82,9 @@
 	z-index: 1
 	top: 50%
 	transform: translateY(-50%)
+	+r(767)
+		width: 42px
+		height: 42px
 	&:hover
 		background-color: rgba(255, 255, 255, 0.3)
 	&--right

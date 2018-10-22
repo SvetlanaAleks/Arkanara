@@ -5,14 +5,6 @@ body
 .icon
 	display: inline-block
 	cursor: pointer
-	&-burger
-		+sprite($language)
-	&-search
-		+sprite($search)
-	&-shape
-		+sprite($shape)
-	&-cart
-		+sprite($cart)
 	&-facebook
 		+sprite($facebook)
 	&-instagram
@@ -41,6 +33,8 @@ body
 		+sprite($lacoste)
 
 .plates
+	width: 100%
+	min-width: 0
 	display: flex
 	flex-wrap: wrap
 	&--5
@@ -61,6 +55,7 @@ body
 .product
 	text-align: center
 	max-width: 350px
+	min-width: 0
 	position: relative
 	overflow: hidden
 	margin-right: 30px
@@ -188,7 +183,9 @@ body
 		display: inline-block
 		.fico-arrow
 			font-size: 8px
-
+.container
+	+r(575)
+		width: 320px
 .catalog
 	.nav
 		margin-bottom: 80px
@@ -199,6 +196,12 @@ body
 	font-size: 3rem
 	&::before
 		display: block
+	&-search
+		font-size: 18px
+	&-share
+		font-size: 18px
+	&-cart
+		font-size: 19px
 .out
 	overflow: hidden
 .burger
@@ -209,6 +212,8 @@ body
 	display: none
 	+r(991)
 		display: inline-block
+	+r(575)
+		top: 46px
 	&__line
 		display: block
 		transition: all .4s

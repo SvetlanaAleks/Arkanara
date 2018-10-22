@@ -10,6 +10,16 @@
 		padding: 15px
 		background: transparentize(#dedede,.25)
 		padding-bottom: 0
+	&__logo
+		+r(575)
+			position: absolute
+			left: 0
+			right: 0
+			top: 10px
+			text-align: center
+	.fico
+		&-share
+			margin-right: 22px
 	&__top
 		display: flex
 		justify-content: space-between
@@ -18,11 +28,19 @@
 		border-bottom: 1px solid $grey
 		+r(991)
 			padding-bottom: 15px
+		+r(575)
+			padding-bottom: 60px
 	&__btns
 		display: flex
 		align-items: center
+		&--right
+			+r(575)
+				right: 20px
 		+r(991)
 			padding-left: 46px
+		+r(575)
+			position: absolute
+			bottom: 13px
 	&__lang
 		position: relative
 		.list
@@ -103,6 +121,10 @@
 			background-color: white
 			box-shadow: 0 7px 15px rgba(1, 2, 3, 0.15)
 			position: relative
+			+r(575)
+				height: 40px
+				min-width: 200px
+				top: 10px
 		&__input
 			position: absolute
 			border: none
@@ -119,7 +141,6 @@
 			top: 0
 			bottom: 0
 			margin: auto
-			+sprite($search)
 			border: none
 			background-color: rgba(0,0,0,0)
 			opacity: .4
@@ -148,6 +169,8 @@
 			&--active
 				overflow-y: auto
 				transform: translateX(0)
+		+r(575)
+			top: 75px
 	&__link
 		text-transform: uppercase
 		text-decoration: none
@@ -292,6 +315,7 @@
 		display: flex
 		flex-direction: column
 		justify-content: space-between
+
 .cart
 	&__btn
 		position: relative
