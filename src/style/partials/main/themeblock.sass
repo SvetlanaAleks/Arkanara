@@ -1,15 +1,33 @@
 .themeblock
 	padding: 0px 35px 100px 35px
+	+r(991)
+		padding: 0 15px 50px
 	&__list
 		display: flex
 		justify-content: space-around
+		+r(767)
+			display: block
+			padding-bottom: 25px
+			width: 100%
+			max-width: 450px
+			margin: auto
+		+r(575)
+			max-width: 320px
 		.item
 			position: relative
+			+r(767)
+				max-width: 100%
+				width: 100%
+				margin: 0 30px
+				text-align: center
 			&:not(:last-of-type)
 				margin-right: 30px
 			&__img
 				max-width: 100%
 				height: auto
+				+r(767)
+					// max-width: 320px
+					margin: auto
 			.btn
 				text-align: center
 				text-decoration: none
@@ -26,6 +44,12 @@
 				font-size: 11px
 				transition: all .3s
 				cursor: pointer
+				+r(1199)
+					line-height: 50px
+					min-width: 200px
+				+r(991)
+					line-height: 45px
+					min-width: 180px
 				&:hover
 					background-color: black
 					color: white

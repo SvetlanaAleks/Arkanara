@@ -1,12 +1,16 @@
 .trending
 	text-align: center
 	padding-bottom: 70px
+	+r(767)
+		padding-bottom: 50px
 	&__title
 		font-size: 42px
 		color: #161918
 		position: relative
 		padding-bottom: 30px
 		margin-bottom: 30px
+		+r(991)
+			font-size: 38px
 		&::after
 			content: ''
 			display: block
@@ -23,11 +27,22 @@
 		max-width: 70%
 		margin: auto
 		margin-bottom: 30px
+		+r(991)
+		max-width: 100%
+		width: 100%
 	&__tabs
 		display: flex
 		justify-content: center
 		padding-bottom: 8px
 		margin-bottom: 40px
+		+r(575)
+			display: block
+			.list
+				&:not(:last-of-type)
+					margin-right: 0
+					margin-bottom: 10px
+				&::after
+					display: none
 		.list
 			min-width: 150px
 			font-size: 12px
@@ -77,14 +92,18 @@
 		color: white
 		padding: 25px 60px
 		transition: all .3s
+		+r(767)
+			padding: 15px 50px
 		&:hover
 			border-color: black
 			color: black
 			background: none
 .tab
 	margin: auto
-	padding: 0 30px 0 30px
+	padding: 0 30px
 	width: 100%
+	+r(767)
+		padding: 0 15px
 	.plates
 		&:last-of-type
 			margin-bottom: 75px

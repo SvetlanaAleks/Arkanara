@@ -44,4 +44,3 @@ const Controls = (function() {
     }
   };
 })();
-Controls.init();

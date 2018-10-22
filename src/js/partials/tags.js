@@ -45,4 +45,3 @@ const Tags = (function() {
     }
   };
 })();
-Tags.init();

@@ -4,11 +4,25 @@
 	&__list
 		display: flex
 		justify-content: space-between
+		+r(767)
+			display: block
+			padding-bottom: 25px
+			width: 100%
+			max-width: 450px
+			margin: auto
 		.item
 			padding-top: 75px
 			max-width: 300px
 			text-align: center
 			position: relative
+			+r(991)
+				padding-top: 65px
+				max-width: 190px
+			+r(767)
+				width: 100%
+				max-width: 100%
+				outline: none
+				margin: 0 30px
 			&::after
 				content: ''
 				display: block
@@ -17,6 +31,8 @@
 				top: 0
 				left: 0
 				margin: 0 auto
+				+r(991)
+					transform: scale(.8)
 			&-1
 				&::after
 					+sprite($discount-system)
@@ -29,8 +45,16 @@
 			&__title
 				font-weight: 500
 				margin-bottom: 25px
+				+r(991)
+					margin-bottom: 15px
 			&__text
 				color: #929292
 				font-size: 13px
 				font-weight: 400
 				line-height: 20px
+				+r(991)
+					font-size: 12px
+				+r(767)
+					max-width: 320px
+					width: 100%
+					margin: auto

@@ -37,13 +37,27 @@ body
 	min-width: 0
 	display: flex
 	flex-wrap: wrap
+	+r(767)
+		display: block
+		max-width: 320px
+		margin: auto
+		padding: 0 30px
 	&--5
-		.product
-			width: calc(20% - 30px + 30px/5)
-			&:nth-of-type(5n)
-				margin-right: 0
-			&:nth-last-child(-n+5)
-				margin-bottom: 0
+		+rm(992)
+			.product
+				width: calc(20% - 30px + 30px/5)
+				&:nth-of-type(5n)
+					margin-right: 0
+				&:nth-last-child(-n+5)
+					margin-bottom: 0
+		+r(991)
+			margin-bottom: 55px
+			.product
+				width: calc(33.333333% - 30px + 30px/3)
+				&:nth-of-type(3n)
+					margin-right: 0
+				&:nth-last-child(-n+3)
+					margin-bottom: 0
 	&--3
 		margin-bottom: 55px
 		.product
@@ -60,6 +74,9 @@ body
 	overflow: hidden
 	margin-right: 30px
 	margin-bottom: 35px
+	+r(767)
+		max-width: 100%
+		margin: 0 auto 20px
 	&__content
 		position: relative
 		margin-bottom: 20px
@@ -97,6 +114,12 @@ body
 		transition: transform .5s
 		opacity: 0
 		pointer-events: none
+		+r(1199)
+			max-width: 100%
+			width: 50px
+			padding: 10px
+		+r(575)
+			padding: 13px
 		&-view
 			transform: translateX(-200%)
 			left: 15px
@@ -113,6 +136,9 @@ body
 		white-space: nowrap
 		font-size: 0
 		transition: transform .3s
+		+r(767)
+			img
+				display: inline-block
 	&:hover
 		.product
 			&__img-wrap
@@ -232,3 +258,15 @@ body
 				&:nth-of-type(3)
 					transform: scale(.8) rotate(-45deg)
 					transform-origin: 0 100%
+.fico
+	&.slick-arrow
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		cursor: pointer
+		font-size: 15px
+		z-index: 1
+	&-arr-right
+		right: 0
+	&-arr-left
+		left: 0
