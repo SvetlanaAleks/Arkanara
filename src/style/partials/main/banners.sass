@@ -2,6 +2,8 @@
 	background-color: rgba(242, 242, 242, 0.4)
 	.content
 		display: flex
+		+r(767)
+			display: block
 	&__photo
 		flex-shrink: 0
 		flex-basis: 50%
@@ -12,12 +14,21 @@
 		flex-shrink: 0
 		margin: auto
 		text-align: center
+		+r(767)
+			padding-top: 20px
+			padding-bottom: 20px
 		.title
 			font-size: 42px
 			color: #161918
 			padding-bottom: 30px
 			position: relative
 			margin-bottom: 65px
+			+r(991)
+				font-size: 36px
+				margin-bottom: 50px
+			+r(767)
+				margin-bottom: 30px
+				font-size: 30px
 			&::after
 				content: ''
 				display: block
@@ -31,6 +42,13 @@
 			color: #929292
 			font-size: 13px
 			margin-bottom: 45px
+			+r(1199)
+				margin: 0 20px 30px
+			+r(767)
+				max-width: 100%
+				width: 400px
+				margin: auto
+				margin-bottom: 25px
 		.btn
 			text-decoration: none
 			border: 1px solid #010203
@@ -40,3 +58,7 @@
 			text-transform: uppercase
 			background: none
 			padding: 20px 45px
+			+r(1199)
+				display: inline-block
+			+r(767)
+				padding: 15px 30px
