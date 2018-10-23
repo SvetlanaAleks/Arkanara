@@ -5,22 +5,51 @@
 		justify-content: space-between
 		padding-top: 60px
 		padding-bottom: 70px
+		+r(991)
+			padding-top: 30px
+			padding-bottom: 40px
+		+r(767)
+			display: block
 	&__col
+		+r(991)
+			font-size: 13px
+			max-width: 100%
+			width: 150px
+		+r(767)
+			width: 33%
+		+r(575)
+			width: 48%
 		&:first-of-type
 			width: 310px
+			+r(767)
+				margin: auto
+		+r(767)
+			&:not(:first-of-type)
+				display: inline-flex
+				justify-content: center
 		.logo
 			margin-bottom: 45px
+			+r(991)
+				margin-bottom: 35px
 		.text
 			color: #929292
 			font-size: 13px
 			line-height: 20px
 			margin-bottom: 35px
-	&__list
 	&__item
 		&:not(:last-of-type)
 			margin-bottom: 20px
+		+r(575)
+			margin-bottom: 20px
+			text-align: center
+			max-width: 100%
+			width: 100%
+			+r(991)
+				margin-bottom: 15px
 		&:first-of-type
 			margin-bottom: 50px
+			+r(991)
+				margin-bottom: 30px
 		.link
 			text-decoration: none
 			color: #929292
@@ -32,6 +61,10 @@
 	&__form
 		width: 310px
 		position: relative
+		+r(991)
+			width: 270px
+		+r(767)
+			margin-bottom: 20px
 		input
 			box-sizing: border-box
 			width: 100%
