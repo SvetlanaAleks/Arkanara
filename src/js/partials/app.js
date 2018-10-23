@@ -56,7 +56,7 @@ const App = (function() {
         speed: 500,
         prevArrow: '<i class="fico fico-arr-left"></i>',
         nextArrow: '<i class="fico fico-arr-right"></i>',
-        autoplay: true
+        autoplay: false
       });
       isSlider = true;
     },
@@ -94,12 +94,14 @@ const App = (function() {
           this.initSliderMobile(".advantages__list");
           this.initSliderMobile(".themeblock__list");
           this.initSliderMobile(".js_plates-slider");
+          this.initSliderMobile(".js_logo-slider");
         }
       } else {
         if (isSlider) {
           $(".advantages__list").slick("unslick");
           $(".themeblock__list").slick("unslick");
           $(".js_plates-slider").slick("unslick");
+          $(".js_logo-slider").slick("unslick");
           isSlider = false;
         }
       }
