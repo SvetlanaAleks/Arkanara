@@ -4,6 +4,9 @@ const App = (function() {
   const hiddenBlocks = $(".js_hidden-block");
   const tabLinks = $(".js_tab-link");
   const menuList = $(".js_menu-list");
+  const asideBtn = $(".js_aside-btn");
+  const asideClose = $(".js_aside-close");
+  const mainMenu = $(".js_menu ");
   let isSlider = false;
   let isMobile = false;
   return {
@@ -86,6 +89,10 @@ const App = (function() {
       $(window).resize(() => {
         isMobile = this.isMobileScreen();
         this.rebuildLayout();
+        mainMenu.addClass("notransition");
+        setTimeout(() => {
+          mainMenu.removeClass("notransition");
+        }, 300);
       });
     },
     rebuildLayout: function() {
@@ -106,6 +113,21 @@ const App = (function() {
         }
       }
     },
+    mobileAsideEvent: function() {
+      asideBtn.click(function(e) {
+        e.preventDefault();
+        const _this = $(this);
+        const aside = _this.next(".aside");
+        aside.addClass("aside--active");
+        _this.fadeOut();
+      });
+      asideClose.click(function() {
+        const _this = $(this);
+        const aside = _this.parents(".aside");
+        aside.removeClass("aside--active");
+        asideBtn.fadeIn();
+      });
+    },
     init: function() {
       this.hiddenBlocksEvents();
       this.initSlider(".slider");
@@ -113,6 +135,7 @@ const App = (function() {
       isMobile = this.isMobileScreen();
       this.resizeEvent();
       this.rebuildLayout();
+      this.mobileAsideEvent();
       Controls.init();
       Tags.init();
     }

@@ -2,6 +2,32 @@
 	display: inline-block
 	vertical-align: top
 	width: 220px
+	.fico-delete
+		display: none
+	+r(767)
+		position: fixed
+		top: 51px
+		left: 0
+		bottom: 0
+		padding: 50px 15px 0
+		transform: translateX(-100%)
+		transition: transform .4s
+		background: transparentize(white, .2)
+		overflow-y: auto
+		width: 300px
+		z-index: 1
+		&--active
+			transform: translateX(0)
+		.fico-delete
+			color: #525252
+			display: inline-block
+			font-size: 12px
+			position: absolute
+			right: 10px
+			top: 10px
+			cursor: pointer
+	+r(575)
+		top: 76px
 	.title-wrap
 		position: relative
 		display: flex
@@ -126,3 +152,17 @@
 	&:hover
 		background: black
 		color: white
+.aside-btn
+	position: fixed
+	left: 0
+	bottom: 200px
+	transform: rotate(90deg)
+	transform-origin: 0 100%
+	background: #f2f2f2
+	border: none
+	padding: 10px 20px
+	text-transform: uppercase
+	cursor: pointer
+	z-index: 5
+	box-shadow: 1px 0 5px rgba(0,0,0, .3)
+	outline: none

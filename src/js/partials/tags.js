@@ -26,7 +26,7 @@ const Tags = (function() {
       let tag = "";
       for (let i = 0; i < tags.length; i++) {
         const element = tags[i];
-        tag += `<span class="tag">${element} <i class="fico fico-close"></i> </span>`;
+        tag += `<span class="tag" data-key="${element}">${element} <i class="fico fico-close js_tag-remove"></i> </span>`;
       }
       return tag;
     },
@@ -35,13 +35,26 @@ const Tags = (function() {
         $(this)
           .parents("form")
           .trigger("reset");
-
+        // console.log($(this).parents("form"));
+        // filters.prop("checked", false);
         filters.trigger("change");
+      });
+    },
+    removeTagEvent: function() {
+      $(document).on("click", ".js_tag-remove", function() {
+        const _this = $(this);
+        const tag = _this.parent(".tag");
+        const key = tag.data("key");
+        tag.remove();
+
+        $(`[data-title="${key}"]`).prop("checked", false);
       });
     },
     init: function() {
       this.filtersChangeEvent();
       this.resetEvent();
+      this.removeTagEvent();
+      filters.trigger("change");
     }
   };
 })();
